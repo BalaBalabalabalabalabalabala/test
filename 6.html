@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画作品展示</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f2c4d8, #a8d8ea); /* 浅浅的粉蓝色渐变背景 */
+            color: #333; /* 主要文字颜色 */
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* 靠左对齐 */
+            margin-left: 10%; /* 从页面左侧四分之一处开始显示 */
+        }
+        .main-title {
+            text-align: left;
+            font-weight: bold;
+            font-size: 96px; /* 放大三倍 */
+            margin-top: 50px; /* 上方留出空白部分 */
+            margin-bottom: 20px; /* 下方留出空白部分 */
+        }
+        .title {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, #f2c4d8, #a8d8ea); /* 浅粉色渐变背景 */
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 浅色阴影 */
+            background: linear-gradient(to right, #f2c4d8, #a8d8ea); /* 粉蓝色渐变背景 */
+            color: #fff;
+            text-align: left;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .video-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .video-section:hover {
+            transform: scale(1.1);
+        }
+        video {
+            width: 50%;
+            border-radius: 5px;
+        }
+        .description {
+            width: 50%;
+            padding: 10px;
+            color: #666; /* 深灰色 */
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 浅色阴影 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-title">动画作品展示</div>
+
+        <div class="title">动画作品展示</div>
+
+        <div class="subtitle">丝路行者志</div>
+        <div class="video-section">
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description">
+                <p>这是作品1的介绍文字，可以包含相关信息和描述。例如哈哈哈哇哈哈哈</p>
+            </div>
+        </div>
+        <div class="video-section">
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description">
+                <p>这是作品2的介绍文字，可以包含相关信息和描述。</p>
+            </div>
+        </div>
+        <div class="video-section">
+            <video controls>
+                <source src="video3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description">
+                <p>这是作品3的介绍文字，可以包含相关信息和描述。</p>
+            </div>
+        </div>
+
+        <div class="subtitle">嘻嘻嘻</div>
+        <div class="video-section">
+            <video controls>
+                <source src="video4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description">
+                <p>这是作品4的介绍文字，可以包含相关信息和描述。</p>
+            </div>
+        </div>
+        <div class="video-section">
+            <video controls>
+                <source src="video5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description">
+                <p>这是作品5的介绍文字，可以包含相关信息和描述。</p>
+            </div>
+        </div>
+
+        <div class="subtitle">哈哈哈</div>
+        <div class="video-section">
+            <video controls>
+                <source src="video6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="description">
+                <p>这是作品6的介绍文字，可以包含相关信息和描述。</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const particle = document.createElement('span');
+            particle.className = 'particle';
+            particle.style.left = e.pageX + 'px';
+            particle.style.top = e.pageY + 'px';
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
